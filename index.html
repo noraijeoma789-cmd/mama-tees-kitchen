@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mama Tee's Kitchen — Authentic Nigerian Cuisine, Abuja</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Mama <em>Tee's</em> Kitchen</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order Now</a></li>
+        <li><a href="order.html#reservation">Reserve</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;gap:0.8rem;align-items:center;">
+        <button class="nav-voice-btn" id="navVoiceBtn">🎙 Voice Order</button>
+        <a href="order.html" class="nav-order-btn">Order Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span>Delivery Across Abuja</span>
+      <span>Fresh Daily — No Frozen Ingredients</span>
+      <span>Party Jollof for Events</span>
+      <span>Reservations for 5+ Persons</span>
+      <span>Mon–Fri 8AM–9PM · Sat 9AM–10PM · Sun 11AM–7PM</span>
+      <span>Delivery Across Abuja</span>
+      <span>Fresh Daily — No Frozen Ingredients</span>
+      <span>Party Jollof for Events</span>
+      <span>Reservations for 5+ Persons</span>
+      <span>Mon–Fri 8AM–9PM · Sat 9AM–10PM · Sun 11AM–7PM</span>
+    </div>
+  </div>
+
+  <!-- HERO SLIDESHOW -->
+  <section class="hero" id="home">
+    <div class="slide active" id="slide-0">
+      <div class="slide-bg" style="background-image:url('jollof-rice.jpg')"></div>
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" id="slide-1">
+      <div class="slide-bg" style="background-image:url('egusi.jpg')"></div>
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" id="slide-2">
+      <div class="slide-bg" style="background-image:url('chicken.jpg')"></div>
+      <div class="slide-overlay"></div>
+    </div>
+    <div class="slide" id="slide-3">
+      <div class="slide-bg" style="background-image:url('hero-bg.jpeg')"></div>
+      <div class="slide-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-tag"><span>Abuja's Home Kitchen</span></div>
+        <h1 class="hero-title">The Home for<br><em>Food Lovers</em></h1>
+        <p class="hero-sub">From swallow to jollof, pepper soup to grilled chicken — authentic Nigerian meals served with heart, in a space that feels like home.</p>
+        <div class="hero-actions">
+          <a href="order.html" class="btn-hero-primary">Order Now</a>
+          <button class="btn-hero-secondary" id="heroVoiceBtn">🎙 Talk to Mama Tee</button>
+        </div>
+        <div class="hero-hours">
+          <p><strong style="color:#fff;font-weight:600;">Opening Hours</strong></p>
+          <p>Mon–Fri: 8:00 AM – 9:00 PM</p>
+          <p>Sat: 9:00 AM – 10:00 PM &nbsp;·&nbsp; Sun: 11:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide-dots" id="slideDots">
+      <button class="dot active" onclick="goToSlide(0)"></button>
+      <button class="dot" onclick="goToSlide(1)"></button>
+      <button class="dot" onclick="goToSlide(2)"></button>
+      <button class="dot" onclick="goToSlide(3)"></button>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stat"><h3>100%</h3><p>Fresh Ingredients Daily</p></div>
+      <div class="stat"><h3>40+</h3><p>Menu Items Available</p></div>
+      <div class="stat"><h3>24/7</h3><p>Voice Ordering Available</p></div>
+    </div>
+  </div>
+
+  <!-- STORY -->
+  <section class="story">
+    <div class="container">
+      <div class="story-text">
+        <div class="eyebrow"><span>Our Story</span></div>
+        <h2>From Our Pot<br>to Your Plate,<br><em>Every Day</em></h2>
+        <p>Mama Tee's Kitchen was built on one belief — food should taste like it was made with love. We cook fresh every morning, use no frozen ingredients, and bring the real taste of Nigerian home cooking to your table in Abuja.</p>
+        <p>Whether you're stopping in for lunch or ordering for the whole family, every plate leaves our kitchen the same way: hot, fresh, and made with care.</p>
+        <a href="menu.html" class="btn-see-menu">See Full Menu →</a>
+      </div>
+      <div class="story-img">
+        <img src="efo-riro.jpg" alt="Nigerian food from Mama Tee's Kitchen">
+        <div class="story-img-badge">Cooked fresh<br>every morning</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED DISHES -->
+  <section class="featured">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="eyebrow"><span>Specials</span></div>
+          <h2>Customer <em>Favourites</em></h2>
+        </div>
+        <a href="menu.html" class="btn-view-all">View Full Menu →</a>
+      </div>
+      <div class="featured-grid">
+        <div class="dish-card">
+          <img src="jollof-rice.jpg" alt="Party Jollof Rice">
+          <div class="dish-card-overlay"></div>
+          <div class="dish-card-info">
+            <h4>Party Jollof Rice</h4>
+            <p>Smoky, spicy & rich</p>
+            <span class="dish-price">from ₦1,500</span>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="egusi.jpg" alt="Egusi Soup">
+          <div class="dish-card-overlay"></div>
+          <div class="dish-card-info">
+            <h4>Egusi Soup</h4>
+            <p>Rich, hearty & flavourful</p>
+            <span class="dish-price">₦2,000</span>
+          </div>
+        </div>
+        <div class="dish-card">
+          <img src="chicken.jpg" alt="Grilled Chicken">
+          <div class="dish-card-overlay"></div>
+          <div class="dish-card-info">
+            <h4>Grilled Chicken</h4>
+            <p>Tasty, delicious & spicy</p>
+            <span class="dish-price">₦1,500</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOICE ORDER SECTION -->
+  <section class="voice-section">
+    <div class="container">
+      <h2>Order With Your <em>Voice</em></h2>
+      <p>Talk to Mama Tee's AI assistant. Just click the button, tell her what you want, and your order is placed. No typing needed.</p>
+      <button class="voice-btn-main" id="sectionVoiceBtn">🎙 Start Voice Order</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Find Us</h2>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>📍 Location</h3>
+          <p>123 Gimbiya Street, Garki II<br>Abuja, FCT, Nigeria</p>
+        </div>
+        <div class="contact-card">
+          <h3>📞 Phone</h3>
+          <p>+234 812 345 6789</p>
+        </div>
+        <div class="contact-card">
+          <h3>💳 Payment</h3>
+          <p>GTBank<br>Mama Tee's Kitchen<br>Account: 0123456789</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mama Tee's Kitchen. All rights reserved.</p>
+      <p>Built by <a href="https://notion.so" target="_blank">Nora Anabiri</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Slideshow
+    var currentSlide = 0;
+    var totalSlides = 4;
+    var slideInterval;
+
+    function goToSlide(n) {
+      document.getElementById('slide-' + currentSlide).classList.remove('active');
+      document.querySelectorAll('.dot')[currentSlide].classList.remove('active');
+      currentSlide = n;
+      document.getElementById('slide-' + currentSlide).classList.add('active');
+      document.querySelectorAll('.dot')[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide((currentSlide + 1) % totalSlides);
+    }
+
+    slideInterval = setInterval(nextSlide, 5000);
+
+    // Vapi
+    var ASSISTANT_ID = 'd06d28ec-a7a6-4685-bea0-435719a84653';
+    var PUBLIC_KEY = 'd00cafdc-da2f-4fa7-8db7-d4ce07405cb6';
+    var vapiInstance = null;
+    var callActive = false;
+
+    function setVoiceState(state) {
+      var btns = ['navVoiceBtn', 'heroVoiceBtn', 'sectionVoiceBtn'];
+      btns.forEach(function(id) {
+        var btn = document.getElementById(id);
+        if (!btn) return;
+        if (state === 'idle') {
+          btn.classList.remove('active', 'connecting');
+          if (id === 'heroVoiceBtn') btn.textContent = '🎙 Talk to Mama Tee';
+          else btn.textContent = id === 'sectionVoiceBtn' ? '🎙 Start Voice Order' : '🎙 Voice Order';
+        } else if (state === 'connecting') {
+          btn.classList.add('connecting');
+          btn.textContent = '⏳ Connecting...';
+        } else if (state === 'active') {
+          btn.classList.remove('connecting');
+          btn.classList.add('active');
+          btn.textContent = '🔴 End Call';
+        }
+      });
+    }
+
+    function toggleVoice() {
+      if (!vapiInstance) { alert('Voice assistant loading. Please try again in a moment.'); return; }
+      if (callActive) { vapiInstance.stop(); }
+      else { setVoiceState('connecting'); vapiInstance.start(ASSISTANT_ID); }
+    }
+
+    (function(d, t) {
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = 'https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js';
+      g.defer = true; g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function() {
+        vapiInstance = window.vapiSDK.run({ apiKey: PUBLIC_KEY, assistant: ASSISTANT_ID, config: { hideButton: true } });
+        vapiInstance.on('call-start', function() { callActive = true; setVoiceState('active'); });
+        vapiInstance.on('call-end', function() { callActive = false; setVoiceState('idle'); });
+        vapiInstance.on('error', function() { callActive = false; setVoiceState('idle'); });
+      };
+    })(document, 'script');
+
+    document.addEventListener('DOMContentLoaded', function() {
+      ['navVoiceBtn', 'heroVoiceBtn', 'sectionVoiceBtn'].forEach(function(id) {
+        var btn = document.getElementById(id);
+        if (btn) btn.addEventListener('click', toggleVoice);
+      });
+    });
+  </script>
+</body>
+</html>

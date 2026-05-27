@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order — Mama Tee's Kitchen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Mama <em>Tee's</em> Kitchen</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html" class="active">Order Now</a></li>
+        <li><a href="order.html#reservation">Reserve</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;gap:0.8rem;align-items:center;">
+        <button class="nav-voice-btn" id="navVoiceBtn">🎙 Voice Order</button>
+        <a href="order.html" class="nav-order-btn">Order Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <div style="margin-top:76px;"></div>
+
+  <!-- ORDER SECTION -->
+  <section class="order-page" id="order">
+    <div class="container">
+      <div class="order-page-info">
+        <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem;">
+          <div style="width:28px;height:1.5px;background:var(--gold);"></div>
+          <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);">Place Your Order</span>
+        </div>
+        <h1>Order <em>Online</em></h1>
+        <p>Fill the form and we'll confirm your order shortly. Or use our voice assistant to order hands-free.</p>
+
+        <div class="order-voice-card">
+          <h3>Prefer to speak?</h3>
+          <p>Click below to talk to Mama Tee's AI assistant and place your order by voice.</p>
+          <button class="voice-btn-main" id="orderVoiceBtn" style="margin:0 auto;">🎙 Start Voice Order</button>
+        </div>
+
+        <div class="delivery-info">
+          <h3>Delivery Zones & Fees</h3>
+          <div class="delivery-zone-item"><span>Zone 1</span> Wuse 2, Maitama, Asokoro — <span>₦500</span></div>
+          <div class="delivery-zone-item"><span>Zone 2</span> Garki, Utako, Jabi — <span>₦800</span></div>
+          <div class="delivery-zone-item"><span>Zone 3</span> Gwarinpa, Lugbe, Kubwa — <span>₦1,200</span></div>
+        </div>
+      </div>
+
+      <div class="order-form-card">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+          <div class="form-group"><label for="customerName">Full Name</label><input type="text" id="customerName" placeholder="Your full name" required></div>
+          <div class="form-group"><label for="phoneNumber">Phone Number</label><input type="tel" id="phoneNumber" placeholder="08012345678" required></div>
+          <div class="form-group">
+            <label for="orderType">Order Type</label>
+            <select id="orderType" required>
+              <option value="">Select order type</option>
+              <option value="Delivery">Delivery</option>
+              <option value="Pickup">Pickup</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="orderDetails">Order Details</label><textarea id="orderDetails" rows="4" placeholder="E.g. Jollof Rice large, Chicken x2, Plantain" required></textarea><small>List all items you want to order</small></div>
+          <div class="form-group" id="deliveryAddressGroup" style="display:none;"><label for="deliveryAddress">Delivery Address</label><textarea id="deliveryAddress" rows="3" placeholder="Full address including area/zone"></textarea></div>
+          <div class="form-group" id="deliveryFeeGroup" style="display:none;">
+            <label for="deliveryFee">Delivery Zone</label>
+            <select id="deliveryFee">
+              <option value="">Select your zone</option>
+              <option value="500">Zone 1 — ₦500 (Wuse 2, Maitama, Asokoro)</option>
+              <option value="800">Zone 2 — ₦800 (Garki, Utako, Jabi)</option>
+              <option value="1200">Zone 3 — ₦1,200 (Gwarinpa, Lugbe, Kubwa)</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="totalAmount">Total Amount (₦)</label><input type="number" id="totalAmount" placeholder="Sum of items + delivery fee" required><small>Add up all items + delivery fee if applicable</small></div>
+          <button type="submit" class="btn-submit">Submit Order</button>
+          <div id="orderMessage" class="form-message"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVATION -->
+  <section class="reservation-page" id="reservation">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:0.8rem;margin-bottom:0.8rem;">
+        <div style="width:28px;height:1.5px;background:var(--rust);"></div>
+        <span style="font-size:0.7rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--rust);">Book a Table</span>
+      </div>
+      <h1>Make a <em style="font-style:italic;color:var(--gold);">Reservation</em></h1>
+      <p>For parties of 5 or more. Please book at least 24 hours in advance.</p>
+      <form id="reservationForm" style="background:var(--white);padding:2.5rem;border-radius:14px;border:1px solid var(--border);max-width:620px;margin-top:2rem;">
+        <div class="form-group"><label for="resCustomerName">Full Name</label><input type="text" id="resCustomerName" required></div>
+        <div class="form-group"><label for="resPhoneNumber">Phone Number</label><input type="tel" id="resPhoneNumber" placeholder="08012345678" required></div>
+        <div class="form-group"><label for="numberOfPeople">Number of People</label><input type="number" id="numberOfPeople" min="5" placeholder="Minimum 5 people" required></div>
+        <div class="form-group"><label for="reservationDate">Date</label><input type="date" id="reservationDate" required></div>
+        <div class="form-group"><label for="reservationTime">Preferred Time</label><input type="time" id="reservationTime" required></div>
+        <button type="submit" class="btn-submit">Submit Reservation</button>
+        <div id="reservationMessage" class="form-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Mama Tee's Kitchen. All rights reserved.</p>
+      <p>Built by <a href="https://notion.so" target="_blank">Nora Anabiri</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener('scroll', function() {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    var ASSISTANT_ID = 'd06d28ec-a7a6-4685-bea0-435719a84653';
+    var PUBLIC_KEY = 'd00cafdc-da2f-4fa7-8db7-d4ce07405cb6';
+    var vapiInstance = null;
+    var callActive = false;
+
+    function setVoiceState(state) {
+      ['navVoiceBtn','orderVoiceBtn'].forEach(function(id) {
+        var btn = document.getElementById(id);
+        if (!btn) return;
+        if (state === 'idle') { btn.classList.remove('active','connecting'); btn.textContent = id === 'orderVoiceBtn' ? '🎙 Start Voice Order' : '🎙 Voice Order'; }
+        else if (state === 'connecting') { btn.classList.add('connecting'); btn.textContent = '⏳ Connecting...'; }
+        else if (state === 'active') { btn.classList.remove('connecting'); btn.classList.add('active'); btn.textContent = '🔴 End Call'; }
+      });
+    }
+
+    function toggleVoice() {
+      if (!vapiInstance) { alert('Voice assistant loading. Please try again.'); return; }
+      if (callActive) { vapiInstance.stop(); } else { setVoiceState('connecting'); vapiInstance.start(ASSISTANT_ID); }
+    }
+
+    (function(d,t) {
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.src = 'https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js';
+      g.defer = true; g.async = true;
+      s.parentNode.insertBefore(g, s);
+      g.onload = function() {
+        vapiInstance = window.vapiSDK.run({ apiKey: PUBLIC_KEY, assistant: ASSISTANT_ID, config: { hideButton: true } });
+        vapiInstance.on('call-start', function() { callActive = true; setVoiceState('active'); });
+        vapiInstance.on('call-end', function() { callActive = false; setVoiceState('idle'); });
+        vapiInstance.on('error', function() { callActive = false; setVoiceState('idle'); });
+      };
+    })(document, 'script');
+
+    document.addEventListener('DOMContentLoaded', function() {
+      ['navVoiceBtn','orderVoiceBtn'].forEach(function(id) {
+        var btn = document.getElementById(id);
+        if (btn) btn.addEventListener('click', toggleVoice);
+      });
+    });
+  </script>
+</body>
+</html>
